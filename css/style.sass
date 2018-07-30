@@ -1,0 +1,167 @@
+// Imports
+@import reset.css
+@import _typography
+@import form
+
+//clearfix
+=clearfix
+    &:after
+    content: ""
+    display: table
+    clear: both
+
+.container
+        max-width: 65rem
+        margin: 0 auto
+
+body
+    font:
+        family: 'Source Sans Pro', sans-serif
+        size: 15px
+    line-height: 1.4
+    -webkit-font-smoothing: antialiased
+    text-rendering: optimizeLegibility
+
+
+    ul
+        list-style: disc
+        padding-left: 2rem
+section
+    max-width: 65rem
+    margin: 0 auto
+    padding: 2rem 0
+/* Header
+header
+    background: $DarkGray
+    padding:    .667rem 0
+
+    nav
+        color: white
+        text-align: center
+
+/* Main
+
+/* Hero
+#hero
+    padding: 2rem .333rem
+    +clearfix
+
+    h1
+        max-width: 45rem
+        margin: 0 auto 1rem
+
+    .video-small
+        max-width: 45%
+        display: block
+        margin: 3rem 0
+        float: left
+        h5
+            padding: 0
+            margin: 0 auto
+        iframe
+            background: darkred
+            width: 30rem
+            height: 15rem
+
+
+    .first-optin
+        max-width: 45%
+        display: block
+        margin: 3rem 0
+        float: right
+        h4
+            padding-top: 0
+            margin-top: 0
+
+
+
+/*Video
+
+#video-wrapper
+    background: $LightGray
+    overflow: auto
+
+    #video
+        h3
+            text-align: center
+            margin: 0 auto
+
+
+        iframe
+            width: 40rem
+            height: 18rem
+            display: block
+            margin: 2rem auto 1rem
+
+.down-arrow
+    width: 100%
+    max-height: 8rem
+    margin: 0 0 2rem
+
+/* Testimonials
+#testimonials
+
+    padding: 0 0 2rem
+    .testimonials
+        background: $LightGray
+        margin: 1rem 2%
+        padding: 1rem
+        display: inline-block
+        width: 26%
+        border: none
+            radius: .333rem
+
+        .headshot
+            height: 10rem
+            width: 10rem
+            display: block
+            margin: 1rem auto 0
+            background: salmon
+            border: none
+                radius: 50%
+        p
+            margin: 1rem 0
+
+        .client-name
+            font:
+                weight: bold
+            text-align: right
+
+/*CTA
+#CTA
+    background: $LightBlue
+    text-align: center
+    padding: 0 0 2rem
+    form
+        max-width: 30rem
+        margin: 1rem auto
+
+    .heading
+        background-image: url('../images/White-Arrow.png')
+        background-repeat: no-repeat
+        background-position: top center
+        margin-top: 0
+        padding-bottom: 10rem
+
+
+/*Footer
+footer
+    +clearfix
+    width: 100%
+    background: $DarkGray
+    padding: 1rem
+    color: white
+
+    a
+        text-decoration: none
+        color: $LightGray
+
+        &:hover
+            text-decoration: underline
+
+    .copyright
+        float: left
+        a
+            margin-left: 1rem
+    .credit
+        float: right
