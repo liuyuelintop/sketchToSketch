@@ -1,10 +1,15 @@
 @import colors
+@import _media
 //optin
 .CTA
     background: $DarkBlue
     padding: 2rem 0
     border: none
         radius: .333rem
+
+    @media #{$sml}
+        border:
+            radius: 0
 
     label
         text-align: left

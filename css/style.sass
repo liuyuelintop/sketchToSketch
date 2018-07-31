@@ -2,6 +2,7 @@
 @import reset.css
 @import _typography
 @import form
+@import _media
 
 //clearfix
 =clearfix
@@ -26,22 +27,35 @@ body
     ul
         list-style: disc
         padding-left: 2rem
+
+        @media #{$med}
+            list-style: none
+            padding-left: 0
+            text-align: center
+
 section
     max-width: 65rem
     margin: 0 auto
     padding: 2rem 0
 /* Header
 header
+
     background: $DarkGray
     padding:    .667rem 0
 
+    @media #{$sml}
+        padding: 1rem 0
     nav
         color: white
         text-align: center
 
-/* Main
 
-/* Hero
+
+/*   Main
+
+/*   *========================
+/*   *HERO
+/*   *========================
 #hero
     padding: 2rem .333rem
     +clearfix
@@ -50,29 +64,56 @@ header
         max-width: 45rem
         margin: 0 auto 1rem
 
-    .video-small
+    .video-small, .first-optin
         max-width: 45%
         display: block
         margin: 3rem 0
-        float: left
-        h5
-            padding: 0
-            margin: 0 auto
-        iframe
-            background: darkred
-            width: 30rem
-            height: 15rem
 
+        @media #{$med}
+            margin: 3rem auto
+            max-width: 75%
+
+        @media #{$sml}
+            width: 100%
+
+    .video-small
+        float: left
+
+        @media #{$med}
+            float: none
+
+        @media #{$sml}
+            margin: 3rem 2%
+            width: 96%
+            text-align: center
 
     .first-optin
-        max-width: 45%
-        display: block
-        margin: 3rem 0
         float: right
+
+
+        @media #{$med}
+            float: none
+
         h4
             padding-top: 0
-            margin-top: 0
+        h5
+            margin-top: 1rem
 
+            @media #{$med}
+                margin-top: 2rem
+        form
+            @media #{$sml}
+                width: 100%
+
+    iframe
+        width: 100%
+        height: 16.5rem
+
+        @media #{$med}
+            height: 23.33rem
+
+        @media #{$sml}
+            height: 17.3rem
 
 
 /*Video
@@ -93,6 +134,11 @@ header
             display: block
             margin: 2rem auto 1rem
 
+            @media #{$med}
+                width: 100%
+                height: 15rem
+
+
 .down-arrow
     width: 100%
     max-height: 8rem
@@ -100,32 +146,50 @@ header
 
 /* Testimonials
 #testimonials
-
     padding: 0 0 2rem
-    .testimonials
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    justify-content: center
+
+    .testimonial
         background: $LightGray
-        margin: 1rem 2%
+        margin: 1rem
         padding: 1rem
         display: inline-block
-        width: 26%
+        width: 25%
         border: none
-            radius: .333rem
+            radius: .5rem
+
+        @media #{$med}
+            margin: 1rem 1rem 2rem
+
+        @media #{$sml}
+            width: 55%
 
         .headshot
-            height: 10rem
-            width: 10rem
+            height: auto
+            width: 60%
             display: block
             margin: 1rem auto 0
             background: salmon
             border: none
                 radius: 50%
+
+            @media #{$sml}
+                width: 35%
         p
             margin: 1rem 0
+            @media #{$sml}
+                text-align: center
 
         .client-name
             font:
                 weight: bold
-            text-align: right
+            margin-top: -1px
+            padding: 0
+            @media #{$sml}
+                text-align: center
 
 /*CTA
 #CTA
@@ -134,7 +198,10 @@ header
     padding: 0 0 2rem
     form
         max-width: 30rem
-        margin: 1rem auto
+        margin: 2rem auto 1rem
+
+        @media #{$sml}
+            width: 100%
 
     .heading
         background-image: url('../images/White-Arrow.png')
@@ -142,6 +209,11 @@ header
         background-position: top center
         margin-top: 0
         padding-bottom: 10rem
+
+        @media #{$sml}
+            width: 100%
+            background-size: cover
+
 
 
 /*Footer
@@ -165,3 +237,9 @@ footer
             margin-left: 1rem
     .credit
         float: right
+
+    @media #{$sml}
+        .copyright, .credit
+            float: none
+            text-align: center
+            margin-bottom: 1rem
